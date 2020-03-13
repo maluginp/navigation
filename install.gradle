@@ -7,7 +7,7 @@ install {
         pom {
             project {
                 packaging 'aar'
-                groupId "$group"
+                groupId "ru.maluginp"
                 artifactId 'navigation'
                 name 'navigation'
                 description 'Easy navigation for Acitivities to work inside presenters'

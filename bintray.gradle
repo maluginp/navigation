@@ -1,5 +1,7 @@
 apply plugin: 'com.jfrog.bintray'
 
+version = "$lib_version"
+
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
@@ -16,7 +18,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 artifacts {
-    archives javadocJar
+//    archives javadocJar
     archives sourcesJar
 }
 
@@ -29,7 +31,7 @@ bintray {
     key = properties.getProperty("bintray.apikey")
 
     pkg {
-        repo = 'maven'
+        repo = 'navigation'
         name = 'ru.maluginp.navigation'
         configurations = ['archives']
         desc = 'Easy navigation for Acitivities to work inside presenters'
