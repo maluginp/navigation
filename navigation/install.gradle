@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'ru.maluginp'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId "$group"
+                artifactId 'navigation'
+                name 'navigation'
+                description 'Easy navigation for Acitivities to work inside presenters'
+                url 'https://github.com/maluginp/navigation'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'maluginp'
+                        name 'Malyugin Platon'
+                        email 'malugin.p@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection 'https://github.com/maluginp/navigation.git'
+                    developerConnection 'https://github.com/maluginp/navigation.git'
+                    url 'https://github.com/maluginp/navigation'
+                }
+            }
+        }
+    }
+}
